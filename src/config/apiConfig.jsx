@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-undef
 const API_BASE_URL = 'http://localhost:3000/api'
+//const API_BASE_URL = 'http://localhost:8080/api'
 
 const API_ENDPOINTS = {
   getCategories: `${API_BASE_URL}/categories`,
@@ -19,7 +20,8 @@ const API_ENDPOINTS = {
   searchProducts: `${API_BASE_URL}/products/search`,
   postProducts: `${API_BASE_URL}/products`,
   getProductDetails: (productId) => `${API_BASE_URL}/products/${productId}`,
-  impoetProducts: `${API_BASE_URL}/products/import`,
+  importProducts: `${API_BASE_URL}/products/import`,
+  exportData: `${API_BASE_URL}/export`,
 }
 
 export default API_ENDPOINTS

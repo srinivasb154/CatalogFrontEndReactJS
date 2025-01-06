@@ -13,6 +13,7 @@ import AddProductReview from './product/AddProductReview'
 import AddProductAssets from './product/AddProductAssets'
 import ProductAssets from './product/ProductAssets'
 import ProductImportTool from './import/ProductImportTool'
+import CatalogExportTool from './export/CatalogExportTool'
 
 const ProductScreen = () => {
   const [currentProductScreen, setCurrentProductScreen] = useState('options')
@@ -90,6 +91,17 @@ const ProductScreen = () => {
                 Import Products
               </Link>
             </ListItem>
+            <ListItem>
+              <Link
+                href='#'
+                onClick={() =>
+                  handleProductScreenNavigation('exportCatalogData')
+                }
+                underline='hover'
+              >
+                Export Catalog Data
+              </Link>
+            </ListItem>
           </List>
         </>
       )}
@@ -163,6 +175,18 @@ const ProductScreen = () => {
             Back to Options
           </Button>
           <ProductImportTool />
+        </>
+      )}
+
+      {currentProductScreen === 'exportCatalogData' && (
+        <>
+          <Button
+            onClick={() => handleProductScreenNavigation('options')}
+            sx={{ mb: 2 }}
+          >
+            Back to Options
+          </Button>
+          <CatalogExportTool />
         </>
       )}
     </Container>

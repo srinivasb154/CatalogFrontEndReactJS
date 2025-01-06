@@ -34,7 +34,7 @@ const ProductImportTool = () => {
     formData.append('mode', mode)
 
     try {
-      const response = await fetch(API_ENDPOINTS.impoetProducts, {
+      const response = await fetch(API_ENDPOINTS.importProducts, {
         method: 'POST',
         body: formData,
       })
